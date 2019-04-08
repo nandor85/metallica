@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+<title>Metallica</title>
+<link rel="shortcut icon" href="m-icon.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+#myVideo {
+  position: relative;
+  width: 100%;	
+  min-height: 50%;
+  
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+
+</head>
+<body>
+<div class="w3-row w3-container w3-light-grey">
+
+<!--fejléc-->
+
+<div class="w3-col l1 w3-hide-small w3-hide-medium">
+		<a href="index.html"><img src="icon.png" class="w3-image"></a>
+	</div>
+	
+	<div class="w3-bar w3-light-grey w3-col l10 w3-card-4 w3-padding">
+	<strong>
+		<ul>			
+			<li class="w3-bar-item w3-button w3-wide w3-padding-16 w3-hover-shadow"><a href="news.html">News</a></li>
+			
+			<li class="w3-bar-item w3-button w3-wide w3-padding-16 w3-hover-shadow"><a href="band.html">Band</a></li>
+			
+			<li class="w3-bar-item w3-button w3-wide w3-padding-16 w3-hover-shadow"><a href="history.html">History</li>
+			<li class="w3-bar-item w3-button w3-wide w3-padding-16 w3-hover-shadow"><a href="media.html">Media</a></li>
+			
+			
+			<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-wide w3-padding-16 w3-hover-shadow">Account</button></li>
+		</ul>
+	</strong>			
+	</div>
+	
+	<div class="w3-col l1 w3-hide-small w3-hide-medium">
+		<a href="index.html"><img src="icon.png" class="w3-image"></a>
+	</div>
+</div>
+
+<!--pop up-->	
+
+	<div id="id01" class="w3-modal">
+		<div class="w3-modal-content w3-card-4">
+		  <header class="w3-container w3-red"> 
+			<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+			<h2>Account</h2>
+		  </header>
+		<div class="w3-container">
+			<p>Create a new account</p>
+			<input class="w3-input w3-animate-input" type="text" style="width:175px" placeholder="First Name"><br>
+			<input class="w3-input w3-animate-input" type="text" style="width:175px" placeholder="Last Name"><br>
+			<input class="w3-input w3-animate-input w3-password" type="password" style="width:175px" placeholder="Password"><br>
+			<input class="w3-input w3-animate-input w3-password" type="password" style="width:175px" placeholder="Confirm Password"><br>
+			<input class="w3-input w3-animate-input" type="text" style="width:175px" placeholder="email@example.com"><br>
+			<button class="w3-btn w3-black">Apply</button>
+			<p><input class="w3-check" type="checkbox" checked="checked">
+				<label>Subscribe Me to Your Newsletter</label></p>
+		</div>		
+	
+			<footer class="w3-container w3-red">
+				<p>Metallica</p>
+			</footer>
+		</div>
+	</div>
+	
+<div>
+<div class="w3-col l1 w3-hide-small w3-hide-medium">
+		&nbsp;
+	</div>
+<div class="w3-col l10 videoWrapper">
+<iframe src="https://www.youtube.com/embed/fd_hsV5zU6k" width="720" height="405" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+
+<div class="w3-content">
+  <h2>Metallica - Nothing else matters  - Live in Budapest 2018. 04. 05.</h2>
+  
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+</div>
+
+<div class="w3-col l1 w3-hide-small w3-hide-medium">
+		&nbsp;
+	</div>
+
+<!--lábléc-->
+<div class="w3-row w3-col l12 w3-sand">
+<p class="w3-padding">created by: <a href="mailto:someone@example.com">Kalászdi Nándor</a> <span class="w3-right">copyright</span></p>
+
+</div>
+
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+	
+
+</body>
+</html>
